@@ -1,6 +1,4 @@
 version: 2
-orbs:
-  python: circleci/python@2.1.1
 
 # jobs refer to a single execution of the build
 jobs:
@@ -8,7 +6,7 @@ jobs:
   build:
     # builds occur in a docker container
     docker:
-      - image: cimg/python:3.10
+      - image: cimg/python:3.11.4
     working_directory: ~/repo
 
     # series/ list of steps done for the build
