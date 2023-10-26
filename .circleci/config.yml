@@ -21,8 +21,9 @@ jobs:
             . venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
-            pytest
     # Run the tests for our scripts
-      # - run:
-      #     name: Run tests
-      #     command: python3 -m pytest
+      - run:
+          name: Run tests
+          command: |
+            . venv/bin/activate 
+            python3 -m pytest
