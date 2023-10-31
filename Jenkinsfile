@@ -1,5 +1,13 @@
 pipeline {
-    agent any // You can specify a specific agent label if needed
+   agent any
+   
+    stages {
+        stage('Checkout') {
+            steps {
+                 git url: 'https://github.com/Humphrey-nyaga/devops.git/', branch: 'main'
+            }
+        }
+
         stage('Build') {
             steps {
                 script {
@@ -22,3 +30,4 @@ pipeline {
         }
     }
 }
+
